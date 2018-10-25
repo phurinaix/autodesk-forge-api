@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Http\Request;
+
+// Buckets
 Route::get('checkAuth', 'AutodeskController@checkAuth');
 Route::get('createBucket', 'AutodeskController@createBucket');
 Route::get('getBuckets', 'AutodeskController@getBuckets');
 Route::get('getBucket/{bucketKey}', 'AutodeskController@getBucket');
+
+// Objects
 Route::get('putObjects/{bucketKey}/{objectName}', 'AutodeskController@putObjects');
 Route::get('putLargeObjects/{bucketKey}/{objectName}', 'AutodeskController@putLargeObjects');
 Route::get('getStatusLargeObjectUpload/{bucketKey}/{objectName}/{sessionId}', 'AutodeskController@getStatusLargeObjectUpload');
